@@ -115,10 +115,6 @@
 }
 
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
 
 @media screen and (max-width: 1200px) {
  .links {
@@ -133,27 +129,28 @@
  }
 
 @media screen and (max-width: 720px) {
-  .title {
-    font-size: 10vw;
+  .column {
+    float: left;
+    width: 0%;
+    background-color: #c9c3c3;
+    height: 100vh;
   }
-
-  .links {
-    display: none;
+  .column1 {
+    float: left;
+    width: 100%;
+    background-color: #c9c3c3;
+    height: 100vh;
   }
-
-  .footer {
+  .card {
+    float: left;
+    width: 18%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1px;
     text-align: center;
-    margin-right: 0rem;
+    margin-left: 5px;
   }
+  
+
 }
-
-@media screen and (min-width: 721px) {
-  .sidenav {
-    display: none;
-  }
-
-  .menu {
-    display: none;
-  }
-}
-
