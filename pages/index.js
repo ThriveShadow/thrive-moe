@@ -47,14 +47,35 @@ export default function Home() {
 
     function checkHour(j) {
         if (j < 0) { j = j + 24 };
-        if (j > 24) { j = j - 24 };
+        if (j > 23) { j = j - 24 };
         return j;
     }
 
     useEffect(() => {
         startTime()
+        getLocation()
     });
 
+    var latLong
+    var lat
+    var long
+    function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+          latLong = "Geolocation is not supported by this browser.";
+        }
+      }
+
+    function showPosition(position) {
+        lat = position.coords.latitude; 
+        console.log(lat);
+        long = position.coords.longitude;
+        console.log(long);
+      }
+    
+    /* `https://api.openweathermap.org/data/2.5/weather?lat={$lat}&lon={}&appid=383962a4c749186a8ff6cb068526bc5f&units=metric`
+    */
 
     /*fetch('https://extreme-ip-lookup.com/json/?key=5kJK5Vxj0KKuwIdoKwfJ')
         .then(res => res.json())
@@ -71,12 +92,40 @@ export default function Home() {
     return (
 
         <div className={styles.row}>
-            <div className={styles.column}>Under Heavy Development</div>
+            <div className={styles.column}>
+                <div className={styles.title}>
+                    <h1>thrive • moe</h1>
+                </div>
+                <div className={styles.news}>
+                    <h1>Top News</h1>
+                    <div className={styles.newscard}>
+                        <img src="https://placekitten.com/350/200" alt="kitten" className={styles.newsimg}></img>
+                        <div class={styles.container}>
+                            <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
+                        </div>
+
+                    </div>
+                    <div className={styles.newscard}>
+                        <img src="https://placekitten.com/350/201" alt="kitten" className={styles.newsimg}></img>
+                        <div class={styles.container}>
+                            <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
+                        </div>
+
+                    </div>
+                    <div className={styles.newscard}>
+                        <img src="https://placekitten.com/350/199" alt="kitten" className={styles.newsimg}></img>
+                        <div class={styles.container}>
+                            <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <div className={styles.column1}>
                 <h1><div id="theLocation" className={styles.clock}>Time in Bandung, Indonesia</div></h1>
                 <div id="theTime" className={styles.time}></div>
                 <h1 className={styles.date}><div id="theDate"></div></h1>
-                <div className={styles.row}>
+                <div className={styles.wwtime}>
                     <div className={styles.card}>
                         <h3>New York</h3>
                         <h2 id="timeNY"></h2>
@@ -100,9 +149,18 @@ export default function Home() {
                 </div>
 
 
+
                 <h1 className={styles.date}><div id="timeNY"></div></h1>
             </div>
-            <div className={styles.column2}>cc</div>
+            <div className={styles.column2}>
+                <div className={styles.weather}>
+                    <h1>Weather</h1>
+                    <div className={styles.weathercard}>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
 
 
