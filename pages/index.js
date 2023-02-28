@@ -73,7 +73,8 @@ export default function Home() {
         long = position.coords.longitude;
         console.log(long);
       }
-    
+
+      
     /* `https://api.openweathermap.org/data/2.5/weather?lat={$lat}&lon={}&appid=383962a4c749186a8ff6cb068526bc5f&units=metric`
     */
 
@@ -99,21 +100,21 @@ export default function Home() {
                 <div className={styles.news}>
                     <h1>Top News</h1>
                     <div className={styles.newscard}>
-                        <img src="https://placekitten.com/350/200" alt="kitten" className={styles.newsimg}></img>
+                        <Image src="https://placekitten.com/350/200" layout="fill" alt="kitten" className={styles.newsimg}/>
                         <div class={styles.container}>
                             <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
                         </div>
 
                     </div>
                     <div className={styles.newscard}>
-                        <img src="https://placekitten.com/350/201" alt="kitten" className={styles.newsimg}></img>
+                        <Image src="https://placekitten.com/350/201" layout="fill" alt="kitten" className={styles.newsimg}/>
                         <div class={styles.container}>
                             <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
                         </div>
 
                     </div>
                     <div className={styles.newscard}>
-                        <img src="https://placekitten.com/350/199" alt="kitten" className={styles.newsimg}></img>
+                        <Image src="https://placekitten.com/350/199" layout="fill" alt="kitten" className={styles.newsimg}/>
                         <div class={styles.container}>
                             <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
                         </div>
