@@ -170,8 +170,8 @@ export default function Home() {
                 <div className={styles.weather}>
                     <h1>Weather</h1>
                     <div className={styles.weathercard}>
-                        <div id="weatherIcon" ><Image src="https://openweathermap.org/img/wn/02d@4x.png" width={200} height={200} className={styles.wicon}/></div>
-                        <h1 id="theWeather">Cloudy</h1>
+                        <div id="weatherIcon" ><Image src="https://i.imgur.com/fc7RZn9.jpg" width={200} height={200} className={styles.wicon}/></div>
+                        <h1 id="theWeather">Allow Location</h1>
                     </div>
                 </div>
 
