@@ -32,6 +32,7 @@
 
 .wwtime {
   padding: auto;
+  margin-top: 5vh;
 }
 
 .newsimg {
@@ -47,17 +48,18 @@
 }
 
 .clock{
-  margin-top: 19vh;
+  margin-top: 17vh;
 }
 
 .weather {
-  margin-top: 19vh;
-  margin-left: 6vw;
+  margin-top: 17vh;
+  margin-left: 5vw;
 }
 
 
 .date{
   text-align: right;
+  margin-top: 3vh;
 }
 
 .card {
@@ -78,7 +80,7 @@
 }
 
 .time {
-  margin: 5rem;
+  margin: 7vh;
   flex: 1;
   display: flex;
   flex-direction: column;
