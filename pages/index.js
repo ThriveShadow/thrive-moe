@@ -76,25 +76,19 @@ export default function Home() {
       }
 
     function getWeather(lat,long) {
-        /*fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=383962a4c749186a8ff6cb068526bc5f&units=metric`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=383962a4c749186a8ff6cb068526bc5f&units=metric`)
         .then(res => res.json())
         .then(response => {
             let status = response.weather[0].description;
             let temp = response.main.temp;
+            let icon = response.weather[0].icon
             console.log(status + " " + temp);
 
-            if (status == "clear sky") {document.getElementById('weatherIcon').innerHTML = Clear sky Icon;};
-            else if (status == "few clouds") {document.getElementById('weatherIcon').innerHTML = Few clouds Icon;};
-            else if (status == "scattered clouds") {document.getElementById('weatherIcon').innerHTML = Scattered clouds Icon;};
-            else if (status == "broken clouds") {document.getElementById('weatherIcon').innerHTML = Broken clouds Icon;};
-            else if (status == "shower rain") {document.getElementById('weatherIcon').innerHTML = Shower rain Icon;};
-            else if (status == "rain") {document.getElementById('weatherIcon').innerHTML = Rain Icon;};
-            else if (status == "thunderstorm") {document.getElementById('weatherIcon').innerHTML = 	Thunderstorm Icon;};
-            document.getElementById('theWeather').innerHTML = status + " " + temp;*/
-        })
+            document.getElementById('weatherIcon').innerHTML = `<Image src="http://openweathermap.org/img/wn/${icon}@4x.png" layout="fill">`;
+            document.getElementById('theWeather').innerHTML = status + " " + temp;
+            }) 
+        }
             
-    }
-    /*
     
 
     /*fetch('https://extreme-ip-lookup.com/json/?key=5kJK5Vxj0KKuwIdoKwfJ')
@@ -176,8 +170,8 @@ export default function Home() {
                 <div className={styles.weather}>
                     <h1>Weather</h1>
                     <div className={styles.weathercard}>
-                        <div id="weatherIcon"></div>
-                        <h1 id="theWeather"></h1>
+                        <div id="weatherIcon" ><Image src="https://openweathermap.org/img/wn/02d@4x.png" width={200} height={200} className={styles.wicon}/></div>
+                        <h1 id="theWeather">Cloudy</h1>
                     </div>
                 </div>
 

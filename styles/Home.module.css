@@ -126,12 +126,11 @@
   width: 350px;
   height: 200px;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #cac3c3;
   color: #000000;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  margin-bottom: 20px;
 }
 
 .title {
@@ -147,6 +146,9 @@
   left: 0px;
 }
 
+.wicon {
+  top: -5vh;
+}
 
 
 @media screen and (max-width: 1280px) {
