@@ -101,21 +101,21 @@ export default function Home() {
                     <h1>Top News</h1>
                     <div className={styles.newscard}>
                         <Image src="https://placekitten.com/350/200" layout="fill" alt="kitten" className={styles.newsimg}/>
-                        <div class={styles.container}>
+                        <div className={styles.container}>
                             <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
                         </div>
 
                     </div>
                     <div className={styles.newscard}>
                         <Image src="https://placekitten.com/350/201" layout="fill" alt="kitten" className={styles.newsimg}/>
-                        <div class={styles.container}>
+                        <div className={styles.container}>
                             <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
                         </div>
 
                     </div>
                     <div className={styles.newscard}>
                         <Image src="https://placekitten.com/350/199" layout="fill" alt="kitten" className={styles.newsimg}/>
-                        <div class={styles.container}>
+                        <div className={styles.container}>
                             <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
                         </div>
 
