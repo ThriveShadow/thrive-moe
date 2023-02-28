@@ -72,11 +72,30 @@ export default function Home() {
         console.log(lat);
         long = position.coords.longitude;
         console.log(long);
+        getWeather(lat,long)
       }
 
-      
-    /* `https://api.openweathermap.org/data/2.5/weather?lat={$lat}&lon={}&appid=383962a4c749186a8ff6cb068526bc5f&units=metric`
-    */
+    function getWeather(lat,long) {
+        /*fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=383962a4c749186a8ff6cb068526bc5f&units=metric`)
+        .then(res => res.json())
+        .then(response => {
+            let status = response.weather[0].description;
+            let temp = response.main.temp;
+            console.log(status + " " + temp);
+
+            if (status == "clear sky") {document.getElementById('weatherIcon').innerHTML = Clear sky Icon;};
+            else if (status == "few clouds") {document.getElementById('weatherIcon').innerHTML = Few clouds Icon;};
+            else if (status == "scattered clouds") {document.getElementById('weatherIcon').innerHTML = Scattered clouds Icon;};
+            else if (status == "broken clouds") {document.getElementById('weatherIcon').innerHTML = Broken clouds Icon;};
+            else if (status == "shower rain") {document.getElementById('weatherIcon').innerHTML = Shower rain Icon;};
+            else if (status == "rain") {document.getElementById('weatherIcon').innerHTML = Rain Icon;};
+            else if (status == "thunderstorm") {document.getElementById('weatherIcon').innerHTML = 	Thunderstorm Icon;};
+            document.getElementById('theWeather').innerHTML = status + " " + temp;*/
+        })
+            
+    }
+    /*
+    
 
     /*fetch('https://extreme-ip-lookup.com/json/?key=5kJK5Vxj0KKuwIdoKwfJ')
         .then(res => res.json())
@@ -157,7 +176,8 @@ export default function Home() {
                 <div className={styles.weather}>
                     <h1>Weather</h1>
                     <div className={styles.weathercard}>
-
+                        <div id="weatherIcon"></div>
+                        <h1 id="theWeather"></h1>
                     </div>
                 </div>
 
