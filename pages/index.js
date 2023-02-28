@@ -84,7 +84,7 @@ export default function Home() {
             let icon = response.weather[0].icon
             console.log(status + " " + temp);
 
-            document.getElementById('weatherIcon').innerHTML = `<Image src="http://openweathermap.org/img/wn/${icon}@4x.png" layout="fill">`;
+            document.getElementById('weatherIcon').innerHTML = `<Image src="https://openweathermap.org/img/wn/${icon}@4x.png" layout="fill">`;
             document.getElementById('theWeather').innerHTML = status + " " + temp;
             }) 
         }
@@ -170,7 +170,7 @@ export default function Home() {
                 <div className={styles.weather}>
                     <h1>Weather</h1>
                     <div className={styles.weathercard}>
-                        <div id="weatherIcon" ><Image src="https://i.imgur.com/fc7RZn9.jpg" width={200} height={200} className={styles.wicon}/></div>
+                        <div id="weatherIcon" ><Image src="https://imgur.com/fc7RZn9.jpg" width={200} height={200} className={styles.wicon}/></div>
                         <h1 id="theWeather">Allow Location</h1>
                     </div>
                 </div>
