@@ -174,7 +174,7 @@ export default function Home() {
                     <h1>Weather</h1>
                     <div className={styles.weathercard}>
                         <div className={styles.wcolumn}>
-                            <div id="weatherIcon"  className={styles.wicon}><Image src="https://imgur.com/T8EPVoV.jpeg" width={300} height={200} /></div>
+                            <div id="weatherIcon"  className={styles.wicon}><Image src="https://imgur.com/T8EPVoV.jpeg" width={300} height={200} alt="weather icon placeholder"/></div>
                             <h3 id="theWeather" className={styles.theWeather}>Allow Location</h3>
                         </div>
                         <div className={styles.wcolumn1}>
