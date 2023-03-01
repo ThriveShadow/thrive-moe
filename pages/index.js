@@ -61,35 +61,38 @@ export default function Home() {
     var long
     function getLocation() {
         if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(showPosition);
-        } else { 
-          latLong = "Geolocation is not supported by this browser.";
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            latLong = "Geolocation is not supported by this browser.";
         }
-      }
+    }
 
     function showPosition(position) {
-        lat = position.coords.latitude; 
+        lat = position.coords.latitude;
         console.log(lat);
         long = position.coords.longitude;
         console.log(long);
-        getWeather(lat,long)
-      }
+        getWeather(lat, long)
+    }
 
-    function getWeather(lat,long) {
+    function getWeather(lat, long) {
         fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=383962a4c749186a8ff6cb068526bc5f&units=metric`)
-        .then(res => res.json())
-        .then(response => {
-            let status = response.weather[0].description;
-            let temp = response.main.temp;
-            let icon = response.weather[0].icon
-            console.log(status + " " + temp);
+            .then(res => res.json())
+            .then(response => {
+                let status = response.weather[0].description;
+                let temp = response.main.temp;
+                let humidity = response.main.humidity;
+                let wind = response.wind.speed;
+                let icon = response.weather[0].icon
+                console.log(status + " " + temp);
 
-            document.getElementById('weatherIcon').innerHTML = `<Image src="https://openweathermap.org/img/wn/${icon}@4x.png" layout="fill">`;
-            document.getElementById('theWeather').innerHTML = status + " " + temp;
-            }) 
-        }
-            
-    
+                document.getElementById('weatherIcon').innerHTML = `<Image src="https://openweathermap.org/img/wn/${icon}@4x.png" width="100%">`;
+                document.getElementById('theWeather').innerHTML = status;
+                document.getElementById('weatherStats').innerHTML = "Temp= " + temp + "°C<br>H= " + humidity + "%<br>Wind= " + wind + "m/s";
+            })
+    }
+
+
 
     fetch('https://extreme-ip-lookup.com/json/?key=5kJK5Vxj0KKuwIdoKwfJ')
         .then(res => res.json())
@@ -101,7 +104,7 @@ export default function Home() {
         .catch((data, status) => {
             console.log('Request failed');
         })
-    
+
 
     return (
 
@@ -113,21 +116,21 @@ export default function Home() {
                 <div className={styles.news}>
                     <h1>Top News</h1>
                     <div className={styles.newscard}>
-                        <Image src="https://placekitten.com/350/200" layout="fill" alt="kitten" className={styles.newsimg}/>
+                        <Image src="https://placekitten.com/350/200" layout="fill" alt="kitten" className={styles.newsimg} />
                         <div className={styles.container}>
                             <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
                         </div>
 
                     </div>
                     <div className={styles.newscard}>
-                        <Image src="https://placekitten.com/350/201" layout="fill" alt="kitten" className={styles.newsimg}/>
+                        <Image src="https://placekitten.com/350/201" layout="fill" alt="kitten" className={styles.newsimg} />
                         <div className={styles.container}>
                             <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
                         </div>
 
                     </div>
                     <div className={styles.newscard}>
-                        <Image src="https://placekitten.com/350/199" layout="fill" alt="kitten" className={styles.newsimg}/>
+                        <Image src="https://placekitten.com/350/199" layout="fill" alt="kitten" className={styles.newsimg} />
                         <div className={styles.container}>
                             <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
                         </div>
@@ -170,8 +173,16 @@ export default function Home() {
                 <div className={styles.weather}>
                     <h1>Weather</h1>
                     <div className={styles.weathercard}>
-                        <div id="weatherIcon" ><Image src="https://imgur.com/T8EPVoV.jpeg" width={300} height={200} className={styles.wicon}/></div>
-                        <h1 id="theWeather">Allow Location</h1>
+                        <div className={styles.wcolumn}>
+                            <div id="weatherIcon"  className={styles.wicon}><Image src="https://imgur.com/T8EPVoV.jpeg" width={300} height={200} /></div>
+                            <h3 id="theWeather" className={styles.theWeather}>Allow Location</h3>
+                        </div>
+                        <div className={styles.wcolumn1}>
+                            <div id="weatherStats">
+
+                            </div>
+
+                        </div>
                     </div>
                 </div>
 

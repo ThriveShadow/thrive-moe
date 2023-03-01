@@ -72,6 +72,21 @@
   margin-left: 6.5px;
 }
 
+.wcolumn {
+  float: left;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.wcolumn1 {
+  float: left;
+  width: 50%;
+  height: 100%;
+  position: relative;
+  padding-top: 2vh;
+}
+
 .main {
   margin: 5rem;
   flex: 1;
@@ -104,14 +119,14 @@
 }
 
 .news {
-  margin-top: 4vw;
+  margin-top: 17vh;
   margin-left: 7vw;
 }
 
 .newscard {
   position: relative;
-  width: 350px;
-  height: 200px;
+  width: 18vw;
+  height: 21vh;
   border-radius: 5px;
   background-color: #ffffff;
   color: #000000;
@@ -122,9 +137,9 @@
 }
 
 .weathercard {
-  position: relative;
-  width: 350px;
-  height: 200px;
+  position: absolute;
+  width: 18vw;
+  height: 21vh;
   border-radius: 5px;
   background-color: #cac3c3;
   color: #000000;
@@ -136,6 +151,7 @@
 .title {
   margin-top: 3vw;
   margin-left: 5vw;
+  position: fixed;
 }
 
 .header {
@@ -147,29 +163,17 @@
 }
 
 .wicon {
-  top: -5vh;
+  width: 100%;
+  position: static;
+  object-fit: contain;
 }
 
+.theWeather {
+  text-align: center;
+  margin-top: -3vh;
+}
 
 @media screen and (max-width: 1280px) {
-  .column {
-    float: left;
-    width: 25%;
-    background-color: #c9c3c3;
-    height: 100vh;
-  }
-  .column1 {
-    float: left;
-    width: 50%;
-    background-color: #3d3a3a;
-    height: 100vh;
-  }
-  .column2 {
-    float: left;
-    width: 25%;
-    background-color: #9b9696;
-    height: 100vh;
-  }
   .card {
     float: left;
     width: 18%;
