@@ -91,7 +91,7 @@ export default function Home() {
             
     
 
-    /*fetch('https://extreme-ip-lookup.com/json/?key=5kJK5Vxj0KKuwIdoKwfJ')
+    fetch('https://extreme-ip-lookup.com/json/?key=5kJK5Vxj0KKuwIdoKwfJ')
         .then(res => res.json())
         .then(response => {
             let city = response.city;
@@ -101,7 +101,7 @@ export default function Home() {
         .catch((data, status) => {
             console.log('Request failed');
         })
-    */
+    
 
     return (
 
