@@ -83,12 +83,25 @@ export default function Home() {
                 let temp = response.main.temp;
                 let humidity = response.main.humidity;
                 let wind = response.wind.speed;
-                let icon = response.weather[0].icon
-                console.log(status + " " + temp);
+                let icon = response.weather[0].icon;
+
+                let sunrise = response.sys.sunrise;
+                sunrise = sunrise*1000;
+                var sunriseDate = new Date(sunrise);
+                let sunriseHour = sunriseDate.getHours()
+                let sunriseMin = sunriseDate.getMinutes()
+                sunriseMin = checkTime(sunriseMin)
+
+                let sunset = response.sys.sunset;
+                sunset = sunset*1000;
+                var sunsetDate = new Date(sunset);
+                let sunsetHour = sunsetDate.getHours()
+                let sunsetMin = sunsetDate.getMinutes()
+                sunsetMin = checkTime(sunsetMin)
 
                 document.getElementById('weatherIcon').innerHTML = `<Image src="https://openweathermap.org/img/wn/${icon}@4x.png" width="100%">`;
                 document.getElementById('theWeather').innerHTML = status;
-                document.getElementById('weatherStats').innerHTML = "Temp= " + temp + "°C<br>H= " + humidity + "%<br>Wind= " + wind + "m/s";
+                document.getElementById('weatherStats').innerHTML = "Temp= " + temp + "°C<br>H= " + humidity + "%<br>Wind= " + wind + "m/s<br>Sunrise=" + sunriseHour + ":" + sunriseMin + "<br>Sunset=" + sunsetHour + ":" + sunsetMin;
             })
     }
 
