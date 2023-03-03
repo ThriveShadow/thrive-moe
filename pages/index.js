@@ -101,7 +101,7 @@ export default function Home() {
 
                 document.getElementById('weatherIcon').innerHTML = `<Image src="https://openweathermap.org/img/wn/${icon}@4x.png" width="100%">`;
                 document.getElementById('theWeather').innerHTML = status;
-                document.getElementById('weatherStats').innerHTML = "Temp= " + temp + "°C<br>H= " + humidity + "%<br>Wind= " + wind + "m/s<br>Sunrise=" + sunriseHour + ":" + sunriseMin + "<br>Sunset=" + sunsetHour + ":" + sunsetMin;
+                document.getElementById('weatherStats').innerHTML = "Temp: " + temp + "°C<br>Humid: " + humidity + "%<br>Wind: " + wind + "m/s<br>Sunrise:" + sunriseHour + ":" + sunriseMin + "<br>Sunset:" + sunsetHour + ":" + sunsetMin;
             })
     }
 
@@ -131,21 +131,21 @@ export default function Home() {
                     <div className={styles.newscard}>
                         <Image src="https://placekitten.com/350/200" layout="fill" alt="kitten" className={styles.newsimg} />
                         <div className={styles.container}>
-                            <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
+                            <div className={styles.newstitle}>Lorem Ipsum Starden burden hardenbart placeholder here</div>
                         </div>
 
                     </div>
                     <div className={styles.newscard}>
                         <Image src="https://placekitten.com/350/201" layout="fill" alt="kitten" className={styles.newsimg} />
                         <div className={styles.container}>
-                            <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
+                            <div className={styles.newstitle}>Lorem Ipsum Starden burden hardenbart placeholder here</div>
                         </div>
 
                     </div>
                     <div className={styles.newscard}>
                         <Image src="https://placekitten.com/350/199" layout="fill" alt="kitten" className={styles.newsimg} />
                         <div className={styles.container}>
-                            <h4>Lorem Ipsum Stardenburdenhardenbart placeholder here</h4>
+                            <div className={styles.newstitle}>Lorem Ipsum Starden burden hardenbart placeholder here</div>
                         </div>
 
                     </div>
@@ -188,14 +188,19 @@ export default function Home() {
                     <div className={styles.weathercard}>
                         <div className={styles.wcolumn}>
                             <div id="weatherIcon"  className={styles.wicon}><Image src="https://imgur.com/T8EPVoV.jpeg" width={300} height={200} alt="weather icon placeholder"/></div>
-                            <h3 id="theWeather" className={styles.theWeather}>Allow Location</h3>
+                            <div id="theWeather" className={styles.theWeather}>Allow Location</div>
                         </div>
                         <div className={styles.wcolumn1}>
-                            <div id="weatherStats">
+                            <div id="weatherStats" className={styles.weatherstats}>
 
                             </div>
 
                         </div>
+                    </div>
+                </div>
+                <div className={styles.pomo}>
+                    <h1>Pomodoro</h1>
+                    <div className={styles.pomocard}>
                     </div>
                 </div>
 
