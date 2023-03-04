@@ -92,7 +92,7 @@
   background-color: #ffffff;
   color: #000000;
   text-align: center;
-  margin-left: 6.5px;
+  margin-left: 0.5vw;
 }
 
 .wcolumn {
@@ -253,6 +253,8 @@ font-size: 1vw;
 }
 
 .tab button {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   display: flex;
   float: left;
   border: none;

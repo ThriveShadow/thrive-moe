@@ -84,7 +84,7 @@ export default function Home() {
       document.getElementById("pomo").style.display = "block";
       document.getElementById("short").style.display = "none";
       document.getElementById("long").style.display = "none";
-      document.getElementById("pomobutton").style.backgroundColor = "#c3c3c3";
+      document.getElementById("pomobutton").style.backgroundColor = "#cac3c3";
       document.getElementById("shortbutton").style.backgroundColor = "inherit";
       document.getElementById("longbutton").style.backgroundColor = "inherit";
     
@@ -96,7 +96,7 @@ export default function Home() {
       document.getElementById("short").style.display = "block";
       document.getElementById("long").style.display = "none";
       document.getElementById("pomobutton").style.backgroundColor = "inherit";
-      document.getElementById("shortbutton").style.backgroundColor = "#c3c3c3";
+      document.getElementById("shortbutton").style.backgroundColor = "#cac3c3";
       document.getElementById("longbutton").style.backgroundColor = "inherit";
     
   }
@@ -108,7 +108,7 @@ export default function Home() {
       document.getElementById("long").style.display = "block";
       document.getElementById("pomobutton").style.backgroundColor = "inherit";
       document.getElementById("shortbutton").style.backgroundColor = "inherit";
-      document.getElementById("longbutton").style.backgroundColor = "#c3c3c3";
+      document.getElementById("longbutton").style.backgroundColor = "#cac3c3";
     
   }
 
@@ -219,7 +219,7 @@ export default function Home() {
     <div>
       <Head>
       <title>thrive.moe - A simple productivity site</title>
-        <link rel="icon" href="/images/favicon.ico" />
+        <link rel="icon" href="/Images/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
@@ -235,7 +235,7 @@ export default function Home() {
           </div>
           <div className={styles.news}>
             <p className={styles.headline}>Top News</p>
-            <p className={styles.subheadline}>Powered by 📰⚡ Reader</p>
+            <div className={styles.subheadline}><a href="https://reader.fcd.im/" target="_blank" rel="noreferrer">Powered by 📰⚡ Reader</a></div>
 
             <div className={styles.newscard}>
               <a href={news[0].link} target="_blank" rel="noreferrer">
