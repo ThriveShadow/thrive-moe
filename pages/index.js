@@ -112,7 +112,11 @@ export default function Home() {
 
   }
 
-
+  function play() {
+    var audio = new Audio('/Sounds/alarm.mp3')
+    audio.play()
+  }
+  
 
   function startTimer(m, s, id) {
     console.log(m + ":" + s)
@@ -123,6 +127,7 @@ export default function Home() {
     
     if (s == 0) {
       if (m == 0) {
+        play()
         return;
       } else if (m != 0) {
         m = m - 1;
@@ -372,7 +377,7 @@ export default function Home() {
                   <p id="pomotimer">
                     25:00
                   </p>
-                  <button onClick={() => {startTimer(25, 10, "pomotimer")}}>Start</button>
+                  <button onClick={() => {startTimer(25, 0, "pomotimer")}}>Start</button>
 
                   <button>Pause</button>
                 </div>
@@ -381,10 +386,10 @@ export default function Home() {
               <div id="short" className={styles.tabcontent}>
                 <p className={styles.pomoheadline}>Grab a coffee?</p>
                 <div className={styles.timer}>
-                  <p>
+                  <p id="shorttimer">
                     5:00
                   </p>
-                  <button>Start</button>
+                  <button onClick={() => {startTimer(5, 0, "shorttimer")}}>Start</button>
 
                   <button>Pause</button>
                 </div>
@@ -393,10 +398,10 @@ export default function Home() {
               <div id="long" className={styles.tabcontent}>
                 <p className={styles.pomoheadline}>Get some fresh air!</p>
                 <div className={styles.timer}>
-                  <p>
+                  <p id="longtimer">
                     20:00
                   </p>
-                  <button>Start</button>
+                  <button onClick={() => {startTimer(20, 0, "longtimer")}}>Start</button>
 
                   <button>Pause</button>
                 </div>
