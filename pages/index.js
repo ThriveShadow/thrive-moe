@@ -80,55 +80,60 @@ export default function Home() {
   }
 
   function openTab1() {
-    
-      document.getElementById("pomo").style.display = "block";
-      document.getElementById("short").style.display = "none";
-      document.getElementById("long").style.display = "none";
-      document.getElementById("pomobutton").style.backgroundColor = "#cac3c3";
-      document.getElementById("shortbutton").style.backgroundColor = "inherit";
-      document.getElementById("longbutton").style.backgroundColor = "inherit";
-    
+
+    document.getElementById("pomo").style.display = "block";
+    document.getElementById("short").style.display = "none";
+    document.getElementById("long").style.display = "none";
+    document.getElementById("pomobutton").style.backgroundColor = "#cac3c3";
+    document.getElementById("shortbutton").style.backgroundColor = "inherit";
+    document.getElementById("longbutton").style.backgroundColor = "inherit";
+
   }
 
   function openTab2() {
-    
-      document.getElementById("pomo").style.display = "none";
-      document.getElementById("short").style.display = "block";
-      document.getElementById("long").style.display = "none";
-      document.getElementById("pomobutton").style.backgroundColor = "inherit";
-      document.getElementById("shortbutton").style.backgroundColor = "#cac3c3";
-      document.getElementById("longbutton").style.backgroundColor = "inherit";
-    
+
+    document.getElementById("pomo").style.display = "none";
+    document.getElementById("short").style.display = "block";
+    document.getElementById("long").style.display = "none";
+    document.getElementById("pomobutton").style.backgroundColor = "inherit";
+    document.getElementById("shortbutton").style.backgroundColor = "#cac3c3";
+    document.getElementById("longbutton").style.backgroundColor = "inherit";
+
   }
 
   function openTab3() {
-    
-      document.getElementById("pomo").style.display = "none";
-      document.getElementById("short").style.display = "none";
-      document.getElementById("long").style.display = "block";
-      document.getElementById("pomobutton").style.backgroundColor = "inherit";
-      document.getElementById("shortbutton").style.backgroundColor = "inherit";
-      document.getElementById("longbutton").style.backgroundColor = "#cac3c3";
-    
+
+    document.getElementById("pomo").style.display = "none";
+    document.getElementById("short").style.display = "none";
+    document.getElementById("long").style.display = "block";
+    document.getElementById("pomobutton").style.backgroundColor = "inherit";
+    document.getElementById("shortbutton").style.backgroundColor = "inherit";
+    document.getElementById("longbutton").style.backgroundColor = "#cac3c3";
+
   }
 
 
 
-
-/*function startTimer(m, s, id) {
-    document.getElementById(id).innerHTML = m + ":" + s;
+  function startTimer(m, s, id) {
+    console.log(m + ":" + s)
+    var s1 = checkTime(s)
+    
+    document.getElementById(id).innerHTML = m + ":" + s1;
+    
+    
     if (s == 0) {
-        if (m == 0) {
-            return;
-        } else if (m != 0) {
-            m = m - 1;
-            s = 60;
-        }
+      if (m == 0) {
+        return;
+      } else if (m != 0) {
+        m = m - 1;
+        s = 60;
+      }
     }
 
     s = s - 1;
-    setTimeout(startTimer(m, s), 1000);
-}*/
+    setTimeout(() => {startTimer(m, s, id)}, 1000);
+    
+  }
 
   useEffect(() => {
     startTime();
@@ -233,7 +238,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-      <title>thrive.moe - A simple productivity site</title>
+        <title>thrive.moe - A simple productivity site</title>
         <link rel="icon" href="/Images/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
@@ -355,7 +360,7 @@ export default function Home() {
             <p className={styles.headline}>Pomodoro</p>
             <div className={styles.pomocard}>
               <div className={styles.tab}>
-                
+
                 <button onClick={openTab1} id="pomobutton">Pomodoro</button>
                 <button onClick={openTab2} id="shortbutton">Short Break</button>
                 <button onClick={openTab3} id="longbutton">Long Break</button>
@@ -364,35 +369,35 @@ export default function Home() {
               <div id="pomo" className={styles.tabcontent}>
                 <p className={styles.pomoheadline}>Focus on your work! (WIP)</p>
                 <div className={styles.timer}>
-                  <p>
+                  <p id="pomotimer">
                     25:00
                   </p>
-                  <button>Start</button>
-                  
+                  <button onClick={() => {startTimer(25, 10, "pomotimer")}}>Start</button>
+
                   <button>Pause</button>
                 </div>
               </div>
 
               <div id="short" className={styles.tabcontent}>
-              <p className={styles.pomoheadline}>Grab a coffee?</p>
+                <p className={styles.pomoheadline}>Grab a coffee?</p>
                 <div className={styles.timer}>
                   <p>
                     5:00
                   </p>
                   <button>Start</button>
-                  
+
                   <button>Pause</button>
                 </div>
               </div>
 
               <div id="long" className={styles.tabcontent}>
-              <p className={styles.pomoheadline}>Get some fresh air!</p>
+                <p className={styles.pomoheadline}>Get some fresh air!</p>
                 <div className={styles.timer}>
                   <p>
                     20:00
                   </p>
                   <button>Start</button>
-                  
+
                   <button>Pause</button>
                 </div>
               </div>
