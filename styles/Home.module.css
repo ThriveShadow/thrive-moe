@@ -249,10 +249,12 @@ font-size: 1vw;
   background-color: #f1f1f1;
   border-radius: 5px;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
 .tab button {
+  height: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   display: flex;
@@ -291,57 +293,4 @@ font-size: 1vw;
   margin-left: 0.5vw;
   transition: 0.3s;
   font-size: 0.7vw;
-}
-
-
-@media screen and (max-width: 1280px) {
-  .card {
-    float: left;
-    width: 18%;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    margin-left: 0.3rem;
-  }
-  
-}
-
-@media screen and (max-width: 1000px) {
-  .links {
-     font-size: 4vw;
-  }
- }
-
-@media screen and (max-width: 720px) {
-  .column {
-    float: left;
-    width: 0%;
-    background-color: #c9c3c3;
-    height: 0vh;
-  }
-  .column1 {
-    float: left;
-    width: 100%;
-    background-color: #3d3a3a;
-    height: 100vh;
-  }
-  .column2 {
-    float: left;
-    width: 0%;
-    background-color: #9b9696;
-    height: 0vh;
-  }
-  .card {
-    float: left;
-    width: 18%;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #000000;
-    padding: 1px;
-    text-align: center;
-    margin-left: 5px;
-  }
-  
-
 }
