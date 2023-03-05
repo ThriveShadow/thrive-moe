@@ -114,13 +114,28 @@ export default function Home() {
 
 
 
+
+/*function startTimer(m, s, id) {
+    document.getElementById(id).innerHTML = m + ":" + s;
+    if (s == 0) {
+        if (m == 0) {
+            return;
+        } else if (m != 0) {
+            m = m - 1;
+            s = 60;
+        }
+    }
+
+    s = s - 1;
+    setTimeout(startTimer(m, s), 1000);
+}*/
+
   useEffect(() => {
     startTime();
     getLocation();
     openTab1();
   });
 
-  var latLong;
   var lat;
   var long;
   function getLocation() {
@@ -347,7 +362,7 @@ export default function Home() {
               </div>
 
               <div id="pomo" className={styles.tabcontent}>
-                <p className={styles.pomoheadline}>Focus on your work!</p>
+                <p className={styles.pomoheadline}>Focus on your work! (WIP)</p>
                 <div className={styles.timer}>
                   <p>
                     25:00
