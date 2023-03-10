@@ -84,7 +84,7 @@ export default function Home() {
     document.getElementById("pomo").style.display = "block";
     document.getElementById("short").style.display = "none";
     document.getElementById("long").style.display = "none";
-    document.getElementById("pomobutton").style.backgroundColor = "#cac3c3";
+    document.getElementById("pomobutton").style.backgroundColor = "#6B728E";
     document.getElementById("shortbutton").style.backgroundColor = "inherit";
     document.getElementById("longbutton").style.backgroundColor = "inherit";
 
@@ -96,7 +96,7 @@ export default function Home() {
     document.getElementById("short").style.display = "block";
     document.getElementById("long").style.display = "none";
     document.getElementById("pomobutton").style.backgroundColor = "inherit";
-    document.getElementById("shortbutton").style.backgroundColor = "#cac3c3";
+    document.getElementById("shortbutton").style.backgroundColor = "#6B728E";
     document.getElementById("longbutton").style.backgroundColor = "inherit";
 
   }
@@ -108,7 +108,7 @@ export default function Home() {
     document.getElementById("long").style.display = "block";
     document.getElementById("pomobutton").style.backgroundColor = "inherit";
     document.getElementById("shortbutton").style.backgroundColor = "inherit";
-    document.getElementById("longbutton").style.backgroundColor = "#cac3c3";
+    document.getElementById("longbutton").style.backgroundColor = "#6B728E";
 
   }
 
@@ -226,9 +226,9 @@ export default function Home() {
 
   const [news, setNews] = useState(
     Array(3).fill({
-      title: "Placeholder ",
+      title: "Placeholder",
       image: "https://placekitten.com/350/199",
-      link: "",
+      link: "https://placekitten.com/350/199",
     })
   );
   useEffect(() => {

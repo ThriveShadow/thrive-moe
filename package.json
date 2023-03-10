@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "@vercel/analytics": "^0.1.10",
-    "next": "^12.2.5",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "next": "^12.3.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "eslint": "7.32.0",
