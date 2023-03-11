@@ -232,7 +232,7 @@ export default function Home() {
     })
   );
   useEffect(() => {
-    fetch("https://reader.fcd.im/api/news")
+    fetch("https://getreader.app/api/news")
       .then((res) => res.json())
       .then((response) => {
         //setNews(response.news);
