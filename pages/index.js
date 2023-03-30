@@ -256,7 +256,7 @@ export default function Home() {
       <div className={styles.row}>
         <div className={styles.column}>
           <div className={styles.title}>
-            <p>thrive • moe</p>
+            <p>thrive</p>
           </div>
           <div className={styles.news}>
             <p className={styles.headline}>Top News</p>
