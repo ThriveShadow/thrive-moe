@@ -117,6 +117,22 @@ export default function Home() {
     audio.play()
   }
   
+  var pause = 0
+
+  function flagPause() {
+    console.log("pressed")
+    if (pause == 0) {
+      pause = 1
+      if (document) {
+        document.getElementById("pauseButton").innerHTML = "Resume";
+      }
+    } else if (pause == 1) {
+      pause = 0
+      if (document) {
+        document.getElementById("pauseButton").innerHTML = "Pause";
+      }
+    }
+  }
 
   function startTimer(m, s, id) {
     console.log(m + ":" + s)
@@ -124,18 +140,20 @@ export default function Home() {
     
     document.getElementById(id).innerHTML = m + ":" + s1;
     
-    
-    if (s == 0) {
-      if (m == 0) {
-        play()
-        return;
-      } else if (m != 0) {
-        m = m - 1;
-        s = 60;
+    if (pause == 0) {
+      if (s == 0) {
+        if (m == 0) {
+          play()
+          return;
+        } else if (m != 0) {
+          m = m - 1;
+          s = 60;
+        }
       }
+  
+      s = s - 1;
     }
-
-    s = s - 1;
+    
     setTimeout(() => {startTimer(m, s, id)}, 1000);
     
   }
@@ -379,7 +397,7 @@ export default function Home() {
                   </p>
                   <button onClick={() => {startTimer(25, 0, "pomotimer")}}>Start</button>
 
-                  <button>Pause</button>
+                  <button onClick={flagPause} id="pauseButton">Pause</button>
                 </div>
               </div>
 
@@ -391,7 +409,7 @@ export default function Home() {
                   </p>
                   <button onClick={() => {startTimer(5, 0, "shorttimer")}}>Start</button>
 
-                  <button>Pause</button>
+                  <button onClick={flagPause} id="pauseButton">Pause</button>
                 </div>
               </div>
 
@@ -403,7 +421,7 @@ export default function Home() {
                   </p>
                   <button onClick={() => {startTimer(20, 0, "longtimer")}}>Start</button>
 
-                  <button>Pause</button>
+                  <button onClick={flagPause} id="pauseButton">Pause</button>
                 </div>
               </div>
 
