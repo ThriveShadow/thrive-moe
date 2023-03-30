@@ -372,7 +372,7 @@ export default function Home() {
               </div>
 
               <div id="pomo" className={styles.tabcontent}>
-                <p className={styles.pomoheadline}>Focus on your work! (WIP)</p>
+                <p className={styles.pomoheadline}>Focus on your work!</p>
                 <div className={styles.timer}>
                   <p id="pomotimer">
                     25:00

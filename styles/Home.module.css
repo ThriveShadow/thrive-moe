@@ -56,6 +56,7 @@
 .clock{
   margin-top: 15vh;
   font-size: 2vw;
+  color: #ffffff;
 }
 
 .weather {
@@ -69,6 +70,7 @@
 }
 
 .date {
+  color: #ffffff;
   text-align: right;
   margin-top: 3vh;
   font-size: 2vw;
@@ -121,6 +123,7 @@
 }
 
 .time {
+  color: #ffffff;
   margin: 5vh;
   flex: 1;
   display: flex;
